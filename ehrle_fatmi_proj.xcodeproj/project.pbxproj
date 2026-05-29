@@ -29,12 +29,27 @@
 		5A0393112FC9B22C00F8DE37 /* ehrle_fatmi_projUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ehrle_fatmi_projUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		5A0392F72FC9B22B00F8DE37 /* ehrle_fatmi_proj */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ehrle_fatmi_proj;
-			sourceTree = "<group>";
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		5A0393602FC9C01E00F8DE37 /* Exceptions for "ehrle_fatmi_proj" folder in "ehrle_fatmi_proj" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				ehrle_fatmi_proj.xcdatamodeld,
+			);
+			target = 5A0392F42FC9B22B00F8DE37 /* ehrle_fatmi_proj */;
 		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		5A0393612FC9C01E00F8DE37 /* Exceptions for "ehrle_fatmi_proj" folder in "Compile Sources" phase from "ehrle_fatmi_proj" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = 5A0392F12FC9B22B00F8DE37 /* Sources */;
+			membershipExceptions = (
+				ehrle_fatmi_proj.xcdatamodeld,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
 		5A03930A2FC9B22C00F8DE37 /* ehrle_fatmi_projTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = ehrle_fatmi_projTests;
@@ -43,6 +58,15 @@
 		5A0393142FC9B22C00F8DE37 /* ehrle_fatmi_projUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = ehrle_fatmi_projUITests;
+			sourceTree = "<group>";
+		};
+		5A0393592FC9C01E00F8DE37 /* ehrle_fatmi_proj */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				5A0393602FC9C01E00F8DE37 /* Exceptions for "ehrle_fatmi_proj" folder in "ehrle_fatmi_proj" target */,
+				5A0393612FC9C01E00F8DE37 /* Exceptions for "ehrle_fatmi_proj" folder in "Compile Sources" phase from "ehrle_fatmi_proj" target */,
+			);
+			path = ehrle_fatmi_proj;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -75,7 +99,7 @@
 		5A0392EC2FC9B22B00F8DE37 = {
 			isa = PBXGroup;
 			children = (
-				5A0392F72FC9B22B00F8DE37 /* ehrle_fatmi_proj */,
+				5A0393592FC9C01E00F8DE37 /* ehrle_fatmi_proj */,
 				5A03930A2FC9B22C00F8DE37 /* ehrle_fatmi_projTests */,
 				5A0393142FC9B22C00F8DE37 /* ehrle_fatmi_projUITests */,
 				5A0392F62FC9B22B00F8DE37 /* Products */,
@@ -108,7 +132,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				5A0392F72FC9B22B00F8DE37 /* ehrle_fatmi_proj */,
+				5A0393592FC9C01E00F8DE37 /* ehrle_fatmi_proj */,
 			);
 			name = ehrle_fatmi_proj;
 			packageProductDependencies = (
