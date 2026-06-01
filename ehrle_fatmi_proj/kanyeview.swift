@@ -5,28 +5,37 @@ struct KanyeView: View {
     @State private var isLoading = false
 
     var body: some View {
-        VStack(spacing: 24) {
-            Text("Kanye a déjà dit ...")
-                .font(.largeTitle.bold())
+        ZStack {
+            LinearGradient(
+                colors: [.blue, .purple],
+                startPoint: .top,
+                endPoint: .bottom
+            )
+            .ignoresSafeArea()
 
-            Text(quote)
-                .font(.title3)
-                .multilineTextAlignment(.center)
-                .padding()
+            VStack(spacing: 24) {
+                Text("Kanye a déjà dit ...")
+                    .font(.largeTitle.bold())
 
-            Button {
-                Task { await loadQuote() }
-            } label: {
-                Image("Image 1")
+                Text(quote)
+                    .font(.title3)
+                    .multilineTextAlignment(.center)
+                    .padding()
+
+                Button {
+                    Task { await loadQuote() }
+                } label: {
+                    Image("Image 1")
+                }
+                .buttonStyle(.plain)
+                .disabled(isLoading)
+
+                if isLoading {
+                    ProgressView()
+                }
             }
-            .buttonStyle(.plain)
-            .disabled(isLoading)
-
-            if isLoading {
-                ProgressView()
-            }
+            .padding()
         }
-        .padding()
         .task { await loadQuote() }
     }
 
