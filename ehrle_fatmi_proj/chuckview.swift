@@ -6,30 +6,40 @@ struct ChuckView: View {
     @State private var isLoading = false
 
     var body: some View {
-        VStack(spacing: 24) {
-            Text("le saviez-vous ?")
-                .font(.largeTitle.bold())
-
-            Text(joke)
-                .font(.title3)
-                .multilineTextAlignment(.center)
+        ZStack {
+            Image("chuckbg")
+                .resizable()
+                .ignoresSafeArea()
+            ScrollView{
+                VStack(spacing: 24) {
+                    Text("le saviez-vous ?")
+                        .font(.largeTitle.bold())
+                        .foregroundColor(.white)
+                    
+                    VStack(spacing: 8) {
+                        Text(joke)
+                            .font(.title3)
+                            .multilineTextAlignment(.center)
+                            .foregroundColor(.white)
+                    }
+                    .padding()
+                    
+                    Button {
+                        Task { await loadJoke() }
+                    } label: {
+                        Image("chuck")
+                    }
+                    .buttonStyle(.plain)
+                    .disabled(isLoading)
+                    
+                    if isLoading {
+                        ProgressView()
+                    }
+                }
                 .padding()
-
-            Button {
-                Task { await loadJoke() }
-            } label: {
-                Image("chuck")
-            }
-            .buttonStyle(.plain)
-            .disabled(isLoading)
-
-            if isLoading {
-                ProgressView()
+                .task { await loadJoke() }
             }
         }
-        .padding()
-        .task { await loadJoke() }
-        .navigationBarBackButtonHidden(true)
     }
 
     func loadJoke() async {

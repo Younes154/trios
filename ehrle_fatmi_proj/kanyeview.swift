@@ -7,7 +7,7 @@ struct KanyeView: View {
     var body: some View {
         ZStack {
             LinearGradient(
-                colors: [.blue, .purple],
+                colors: [.white, .gray],
                 startPoint: .top,
                 endPoint: .bottom
             )

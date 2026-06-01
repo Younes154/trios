@@ -14,37 +14,47 @@ struct BreakingBadView: View {
     @State private var isLoading = false
 
     var body: some View {
-        VStack(spacing: 24) {
-            Text("Breaking Bad")
-                .font(.largeTitle.bold())
-
-            VStack(spacing: 8) {
-                Text(quote)
-                    .font(.title3)
-                    .multilineTextAlignment(.center)
-
-                if !author.isEmpty {
-                    Text("— \(author)")
-                        .font(.callout)
-                        .foregroundColor(.secondary)
+        ZStack{
+            Image("bb")
+                .resizable()
+                .scaledToFill()
+                .ignoresSafeArea()
+            ScrollView{
+                VStack(spacing: 24) {
+                    Text("Breaking Bad")
+                        .font(.largeTitle.bold())
+                        .foregroundColor(.white)
+                    
+                    VStack(spacing: 8) {
+                        Text(quote)
+                            .font(.title3)
+                            .multilineTextAlignment(.center)
+                            .foregroundStyle(.white)
+                        
+                        if !author.isEmpty {
+                            Text("— \(author)")
+                                .font(.callout)
+                                .foregroundColor(.white)
+                        }
+                    }
+                    .padding()
+                    
+                    Button {
+                        Task { await loadQuote() }
+                    } label: {
+                        Image("walter")
+                    }
+                    .buttonStyle(.plain)
+                    .disabled(isLoading)
+                    
+                    if isLoading {
+                        ProgressView()
+                    }
                 }
-            }
-            .padding()
-
-            Button {
-                Task { await loadQuote() }
-            } label: {
-                Image("walter")
-            }
-            .buttonStyle(.plain)
-            .disabled(isLoading)
-
-            if isLoading {
-                ProgressView()
+                .padding()
+                .task { await loadQuote() }
             }
         }
-        .padding()
-        .task { await loadQuote() }
     }
 
     func loadQuote() async {
