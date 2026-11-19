@@ -4,6 +4,16 @@ enum AppPage {
     case kanye
     case chuck
     case breakingBad
+
+    /// Page correspondant à un lien du widget (ehrlefatmi://kanye, ehrlefatmi://chuck, ehrlefatmi://breakingBad).
+    init?(url: URL) {
+        switch url.host {
+        case "kanye": self = .kanye
+        case "chuck": self = .chuck
+        case "breakingBad": self = .breakingBad
+        default: return nil
+        }
+    }
 }
 
 struct ContentView: View {
@@ -29,7 +39,14 @@ struct ContentView: View {
                         Text("Breaking Bad").tag(AppPage.breakingBad)
                     }
                     .pickerStyle(.menu)
+                    .accessibilityIdentifier("pagePicker")
                 }
+            }
+        }
+        // Tap sur un widget : ehrlefatmi://kanye, ehrlefatmi://chuck ou ehrlefatmi://breakingBad
+        .onOpenURL { url in
+            if let page = AppPage(url: url) {
+                currentPage = page
             }
         }
     }
