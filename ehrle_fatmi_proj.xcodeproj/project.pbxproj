@@ -107,6 +107,14 @@
 			);
 			target = 5A0394242FC9D00000F8DE37 /* ehrle_fatmi_widget */;
 		};
+		5A0394AA2FC9D00000F8DE37 /* Exceptions for "ehrle_fatmi_widget" folder in "ehrle_fatmi_proj" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				QuoteSource.swift,
+				WidgetIntents.swift,
+			);
+			target = 5A0392F42FC9B22B00F8DE37 /* ehrle_fatmi_proj */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -137,6 +145,7 @@
 		5A0394212FC9D00000F8DE37 /* ehrle_fatmi_widget */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
+				5A0394AA2FC9D00000F8DE37 /* Exceptions for "ehrle_fatmi_widget" folder in "ehrle_fatmi_proj" target */,
 				5A0394232FC9D00000F8DE37 /* Exceptions for "ehrle_fatmi_widget" folder in "ehrle_fatmi_widget" target */,
 			);
 			path = ehrle_fatmi_widget;
