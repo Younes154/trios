@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		5A03940B2FC9D00000F8DE37 /* ehrle_fatmi_watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 5A0394012FC9D00000F8DE37 /* ehrle_fatmi_watch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5A03942B2FC9D00000F8DE37 /* ehrle_fatmi_widget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5A0394202FC9D00000F8DE37 /* ehrle_fatmi_widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		5A0393082FC9B22C00F8DE37 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -21,33 +26,88 @@
 			remoteGlobalIDString = 5A0392F42FC9B22B00F8DE37;
 			remoteInfo = ehrle_fatmi_proj;
 		};
+		5A03940D2FC9D00000F8DE37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A0392ED2FC9B22B00F8DE37 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A0394042FC9D00000F8DE37;
+			remoteInfo = ehrle_fatmi_watch;
+		};
+		5A03942D2FC9D00000F8DE37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A0392ED2FC9B22B00F8DE37 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A0394242FC9D00000F8DE37;
+			remoteInfo = ehrle_fatmi_widget;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5A03940C2FC9D00000F8DE37 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				5A03940B2FC9D00000F8DE37 /* ehrle_fatmi_watch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A03942C2FC9D00000F8DE37 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				5A03942B2FC9D00000F8DE37 /* ehrle_fatmi_widget.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5A0392F52FC9B22B00F8DE37 /* ehrle_fatmi_proj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ehrle_fatmi_proj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A0393072FC9B22C00F8DE37 /* ehrle_fatmi_projTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ehrle_fatmi_projTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A0393112FC9B22C00F8DE37 /* ehrle_fatmi_projUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ehrle_fatmi_projUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A0394012FC9D00000F8DE37 /* ehrle_fatmi_watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ehrle_fatmi_watch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A0394202FC9D00000F8DE37 /* ehrle_fatmi_widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ehrle_fatmi_widget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		5A0393602FC9C01E00F8DE37 /* Exceptions for "ehrle_fatmi_proj" folder in "ehrle_fatmi_proj" target */ = {
+		5A0394032FC9D00000F8DE37 /* Exceptions for "ehrle_fatmi_proj" folder in "ehrle_fatmi_watch" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				ehrle_fatmi_proj.xcdatamodeld,
+				modele/BreakingBadQuote.swift,
+				modele/ChuckQuote.swift,
+				modele/KanyeQuote.swift,
+				services/BreakingBadService.swift,
+				services/chuck_service.swift,
+				services/kanye_service.swift,
 			);
-			target = 5A0392F42FC9B22B00F8DE37 /* ehrle_fatmi_proj */;
+			target = 5A0394042FC9D00000F8DE37 /* ehrle_fatmi_watch */;
+		};
+		5A0394222FC9D00000F8DE37 /* Exceptions for "ehrle_fatmi_proj" folder in "ehrle_fatmi_widget" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				modele/BreakingBadQuote.swift,
+				modele/ChuckQuote.swift,
+				modele/KanyeQuote.swift,
+				services/BreakingBadService.swift,
+				services/chuck_service.swift,
+				services/kanye_service.swift,
+			);
+			target = 5A0394242FC9D00000F8DE37 /* ehrle_fatmi_widget */;
+		};
+		5A0394232FC9D00000F8DE37 /* Exceptions for "ehrle_fatmi_widget" folder in "ehrle_fatmi_widget" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 5A0394242FC9D00000F8DE37 /* ehrle_fatmi_widget */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
-		5A0393612FC9C01E00F8DE37 /* Exceptions for "ehrle_fatmi_proj" folder in "Compile Sources" phase from "ehrle_fatmi_proj" target */ = {
-			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
-			buildPhase = 5A0392F12FC9B22B00F8DE37 /* Sources */;
-			membershipExceptions = (
-				ehrle_fatmi_proj.xcdatamodeld,
-			);
-		};
-/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		5A03930A2FC9B22C00F8DE37 /* ehrle_fatmi_projTests */ = {
@@ -63,10 +123,23 @@
 		5A0393592FC9C01E00F8DE37 /* ehrle_fatmi_proj */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				5A0393602FC9C01E00F8DE37 /* Exceptions for "ehrle_fatmi_proj" folder in "ehrle_fatmi_proj" target */,
-				5A0393612FC9C01E00F8DE37 /* Exceptions for "ehrle_fatmi_proj" folder in "Compile Sources" phase from "ehrle_fatmi_proj" target */,
+				5A0394032FC9D00000F8DE37 /* Exceptions for "ehrle_fatmi_proj" folder in "ehrle_fatmi_watch" target */,
+				5A0394222FC9D00000F8DE37 /* Exceptions for "ehrle_fatmi_proj" folder in "ehrle_fatmi_widget" target */,
 			);
 			path = ehrle_fatmi_proj;
+			sourceTree = "<group>";
+		};
+		5A0394022FC9D00000F8DE37 /* ehrle_fatmi_watch */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ehrle_fatmi_watch;
+			sourceTree = "<group>";
+		};
+		5A0394212FC9D00000F8DE37 /* ehrle_fatmi_widget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				5A0394232FC9D00000F8DE37 /* Exceptions for "ehrle_fatmi_widget" folder in "ehrle_fatmi_widget" target */,
+			);
+			path = ehrle_fatmi_widget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -93,6 +166,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5A0394062FC9D00000F8DE37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A0394262FC9D00000F8DE37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -100,6 +187,8 @@
 			isa = PBXGroup;
 			children = (
 				5A0393592FC9C01E00F8DE37 /* ehrle_fatmi_proj */,
+				5A0394022FC9D00000F8DE37 /* ehrle_fatmi_watch */,
+				5A0394212FC9D00000F8DE37 /* ehrle_fatmi_widget */,
 				5A03930A2FC9B22C00F8DE37 /* ehrle_fatmi_projTests */,
 				5A0393142FC9B22C00F8DE37 /* ehrle_fatmi_projUITests */,
 				5A0392F62FC9B22B00F8DE37 /* Products */,
@@ -112,6 +201,8 @@
 				5A0392F52FC9B22B00F8DE37 /* ehrle_fatmi_proj.app */,
 				5A0393072FC9B22C00F8DE37 /* ehrle_fatmi_projTests.xctest */,
 				5A0393112FC9B22C00F8DE37 /* ehrle_fatmi_projUITests.xctest */,
+				5A0394012FC9D00000F8DE37 /* ehrle_fatmi_watch.app */,
+				5A0394202FC9D00000F8DE37 /* ehrle_fatmi_widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -126,10 +217,14 @@
 				5A0392F12FC9B22B00F8DE37 /* Sources */,
 				5A0392F22FC9B22B00F8DE37 /* Frameworks */,
 				5A0392F32FC9B22B00F8DE37 /* Resources */,
+				5A03940C2FC9D00000F8DE37 /* Embed Watch Content */,
+				5A03942C2FC9D00000F8DE37 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5A03940E2FC9D00000F8DE37 /* PBXTargetDependency */,
+				5A03942E2FC9D00000F8DE37 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				5A0393592FC9C01E00F8DE37 /* ehrle_fatmi_proj */,
@@ -187,6 +282,50 @@
 			productReference = 5A0393112FC9B22C00F8DE37 /* ehrle_fatmi_projUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		5A0394042FC9D00000F8DE37 /* ehrle_fatmi_watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A0394082FC9D00000F8DE37 /* Build configuration list for PBXNativeTarget "ehrle_fatmi_watch" */;
+			buildPhases = (
+				5A0394052FC9D00000F8DE37 /* Sources */,
+				5A0394062FC9D00000F8DE37 /* Frameworks */,
+				5A0394072FC9D00000F8DE37 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				5A0394022FC9D00000F8DE37 /* ehrle_fatmi_watch */,
+			);
+			name = ehrle_fatmi_watch;
+			packageProductDependencies = (
+			);
+			productName = ehrle_fatmi_watch;
+			productReference = 5A0394012FC9D00000F8DE37 /* ehrle_fatmi_watch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5A0394242FC9D00000F8DE37 /* ehrle_fatmi_widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A0394282FC9D00000F8DE37 /* Build configuration list for PBXNativeTarget "ehrle_fatmi_widget" */;
+			buildPhases = (
+				5A0394252FC9D00000F8DE37 /* Sources */,
+				5A0394262FC9D00000F8DE37 /* Frameworks */,
+				5A0394272FC9D00000F8DE37 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				5A0394212FC9D00000F8DE37 /* ehrle_fatmi_widget */,
+			);
+			name = ehrle_fatmi_widget;
+			packageProductDependencies = (
+			);
+			productName = ehrle_fatmi_widget;
+			productReference = 5A0394202FC9D00000F8DE37 /* ehrle_fatmi_widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -208,6 +347,12 @@
 						CreatedOnToolsVersion = 16.4;
 						TestTargetID = 5A0392F42FC9B22B00F8DE37;
 					};
+					5A0394042FC9D00000F8DE37 = {
+						CreatedOnToolsVersion = 26.3;
+					};
+					5A0394242FC9D00000F8DE37 = {
+						CreatedOnToolsVersion = 26.3;
+					};
 				};
 			};
 			buildConfigurationList = 5A0392F02FC9B22B00F8DE37 /* Build configuration list for PBXProject "ehrle_fatmi_proj" */;
@@ -227,6 +372,8 @@
 				5A0392F42FC9B22B00F8DE37 /* ehrle_fatmi_proj */,
 				5A0393062FC9B22C00F8DE37 /* ehrle_fatmi_projTests */,
 				5A0393102FC9B22C00F8DE37 /* ehrle_fatmi_projUITests */,
+				5A0394042FC9D00000F8DE37 /* ehrle_fatmi_watch */,
+				5A0394242FC9D00000F8DE37 /* ehrle_fatmi_widget */,
 			);
 		};
 /* End PBXProject section */
@@ -247,6 +394,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		5A03930F2FC9B22C00F8DE37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A0394072FC9D00000F8DE37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A0394272FC9D00000F8DE37 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -277,6 +438,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5A0394052FC9D00000F8DE37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A0394252FC9D00000F8DE37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -289,6 +464,16 @@
 			isa = PBXTargetDependency;
 			target = 5A0392F42FC9B22B00F8DE37 /* ehrle_fatmi_proj */;
 			targetProxy = 5A0393122FC9B22C00F8DE37 /* PBXContainerItemProxy */;
+		};
+		5A03940E2FC9D00000F8DE37 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A0394042FC9D00000F8DE37 /* ehrle_fatmi_watch */;
+			targetProxy = 5A03940D2FC9D00000F8DE37 /* PBXContainerItemProxy */;
+		};
+		5A03942E2FC9D00000F8DE37 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A0394242FC9D00000F8DE37 /* ehrle_fatmi_widget */;
+			targetProxy = 5A03942D2FC9D00000F8DE37 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -534,6 +719,118 @@
 			};
 			name = Release;
 		};
+		5A0394092FC9D00000F8DE37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Citations;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.dev.ehrle-fatmi-proj";
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dev.ehrle-fatmi-proj.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.5;
+			};
+			name = Debug;
+		};
+		5A03940A2FC9D00000F8DE37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Citations;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.dev.ehrle-fatmi-proj";
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dev.ehrle-fatmi-proj.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.5;
+			};
+			name = Release;
+		};
+		5A0394292FC9D00000F8DE37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ehrle_fatmi_widget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Citations;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dev.ehrle-fatmi-proj.widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5A03942A2FC9D00000F8DE37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ehrle_fatmi_widget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Citations;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dev.ehrle-fatmi-proj.widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -569,6 +866,24 @@
 			buildConfigurations = (
 				5A0393222FC9B22C00F8DE37 /* Debug */,
 				5A0393232FC9B22C00F8DE37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A0394082FC9D00000F8DE37 /* Build configuration list for PBXNativeTarget "ehrle_fatmi_watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A0394092FC9D00000F8DE37 /* Debug */,
+				5A03940A2FC9D00000F8DE37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A0394282FC9D00000F8DE37 /* Build configuration list for PBXNativeTarget "ehrle_fatmi_widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A0394292FC9D00000F8DE37 /* Debug */,
+				5A03942A2FC9D00000F8DE37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
