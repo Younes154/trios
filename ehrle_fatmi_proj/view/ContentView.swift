@@ -17,6 +17,7 @@ enum AppPage {
 }
 
 struct ContentView: View {
+    @ObservedObject var authManager: AuthManager
     @State private var currentPage: AppPage = .kanye
 
     var body: some View {
@@ -32,6 +33,12 @@ struct ContentView: View {
                 }
             }
             .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button("Se déconnecter") {
+                        authManager.signOut()
+                    }
+                    .accessibilityIdentifier("signOutButton")
+                }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Picker("Menu", selection: $currentPage) {
                         Text("Kanye").tag(AppPage.kanye)
