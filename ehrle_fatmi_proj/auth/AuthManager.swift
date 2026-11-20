@@ -12,11 +12,24 @@ final class AuthManager: ObservableObject {
     @Published var isAuthenticated = false
     @Published var errorMessage: String?
 
+    /// Argument de lancement réservé aux tests UI : `-UITestAuthState signedIn|signedOut`.
+    /// Il rend l'état de connexion prévisible, quel que soit le compte resté connecté sur le simulateur.
+    static let uiTestAuthStateKey = "UITestAuthState"
+
     init() {
-        // Si l'utilisateur s'est déjà connecté lors d'un lancement précédent,
-        // Firebase garde la session : on la restaure directement.
-        user = Auth.auth().currentUser
-        isAuthenticated = user != nil
+        switch UserDefaults.standard.string(forKey: Self.uiTestAuthStateKey) {
+        case "signedIn":
+            // Tests UI : on affiche directement l'app, sans compte Firebase.
+            isAuthenticated = true
+        case "signedOut":
+            // Tests UI : on part toujours de l'écran de connexion.
+            try? Auth.auth().signOut()
+        default:
+            // Si l'utilisateur s'est déjà connecté lors d'un lancement précédent,
+            // Firebase garde la session : on la restaure directement.
+            user = Auth.auth().currentUser
+            isAuthenticated = user != nil
+        }
     }
 
     func signUp(email: String, password: String) {

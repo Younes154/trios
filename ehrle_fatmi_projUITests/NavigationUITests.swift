@@ -14,6 +14,8 @@ final class NavigationUITests: XCTestCase {
     override func setUpWithError() throws {
         continueAfterFailure = false
         app = XCUIApplication()
+        // On saute l'écran de connexion Firebase : ces tests portent sur la navigation.
+        app.launchArguments += ["-UITestAuthState", "signedIn"]
         app.launch()
     }
 
